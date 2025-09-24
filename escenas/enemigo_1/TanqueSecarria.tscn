@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://asset/enemigo_1/tanqueSecarria.png" type="Texture" id=1]
+[ext_resource path="res://escenas/enemigo_1/TanqueSecarria.gd" type="Script" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 26.0
+height = 8.0
+
+[node name="TanqueSecarria" type="KinematicBody2D"]
+position = Vector2( 39, 21 )
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 270, 307 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="NPC" type="Sprite" parent="."]
+position = Vector2( 270, 306 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="frame_changed" from="NPC" to="." method="_on_Sprite_frame_changed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
