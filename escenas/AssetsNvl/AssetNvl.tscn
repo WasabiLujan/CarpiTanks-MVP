@@ -17,7 +17,7 @@ extents = Vector2( 15, 305.5 )
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 1029.0
 margin_bottom = 604.0
-color = Color( 0.243137, 0.00392157, 0.00392157, 1 )
+color = Color( 0.643137, 0.737255, 0.894118, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 513, 0 )
