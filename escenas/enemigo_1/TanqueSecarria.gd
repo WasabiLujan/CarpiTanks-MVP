@@ -33,6 +33,5 @@ func _on_Timer_timeout():
 	$Timer.wait_time = tiempo_de_cambios
 	$Timer.start()
 
-
 func _on_Sprite_frame_changed():
 	pass # Replace with function body.
