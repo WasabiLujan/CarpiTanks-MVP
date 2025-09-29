@@ -35,12 +35,18 @@ scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 1 )
 
 [node name="Tanque" parent="." instance=ExtResource( 3 )]
-position = Vector2( 121, 191 )
+position = Vector2( 514, 157 )
 
-[node name="Piedras" type="Node2D" parent="."]
+[node name="TanqueSecarria2" parent="." groups=["obstaculos y limites"] instance=ExtResource( 2 )]
+position = Vector2( 675, -198 )
+
+[node name="TanqueSecarria" parent="." groups=["obstaculos y limites"] instance=ExtResource( 2 )]
+position = Vector2( 97, 171 )
+
+[node name="Piedras" type="Node2D" parent="." groups=["obstaculos y limites"]]
 
 [node name="piedra" parent="Piedras" instance=ExtResource( 6 )]
-position = Vector2( 844, 171 )
+position = Vector2( 824, 183 )
 
 [node name="piedra2" parent="Piedras" instance=ExtResource( 5 )]
 position = Vector2( 159, 457 )
@@ -56,23 +62,18 @@ position = Vector2( 86, 75 )
 
 [node name="Limites" type="StaticBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites" groups=["obstaculos y limites"]]
 position = Vector2( 0, 309 )
 shape = SubResource( 1 )
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Limites"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Limites" groups=["obstaculos y limites"]]
 position = Vector2( 1031.5, 328 )
 shape = SubResource( 2 )
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Limites"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Limites" groups=["obstaculos y limites"]]
 position = Vector2( 521.5, 614 )
 shape = SubResource( 3 )
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Limites"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Limites" groups=["obstaculos y limites"]]
 position = Vector2( 531, -5 )
 shape = SubResource( 4 )
-
-[node name="TanqueSecarria" parent="." instance=ExtResource( 2 )]
-
-[node name="TanqueSecarria2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 455, 68 )
